@@ -25,7 +25,7 @@ public class DiscountController {
     @GetMapping()
     public String discount(@RequestParam LocalDate eventDate,
                            @RequestParam LocalDate bookingDate) {
-        log.info("Request discount calculating...");
+        log.info("Controller: Request discount calculating...");
         if(earlyBirdDiscountService == null){
             return "EarlyBird discount is not available.";
         }

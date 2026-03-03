@@ -8,6 +8,7 @@ import java.time.temporal.ChronoUnit;
 public class EarlyBirdDiscountService {
 
     public String discount(LocalDate eventDate,LocalDate bookingDate) {
+        log.info("Service:");
         log.info("Discount calculating...");
 
         if(eventDate == null || bookingDate == null) {
