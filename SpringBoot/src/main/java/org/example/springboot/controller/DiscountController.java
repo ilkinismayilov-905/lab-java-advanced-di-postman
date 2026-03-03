@@ -18,9 +18,11 @@ import java.util.Optional;
 @Slf4j
 public class DiscountController {
 
-    @Autowired(required = false)
     private EarlyBirdDiscountService earlyBirdDiscountService;
 
+    public DiscountController(EarlyBirdDiscountService earlyBirdDiscountService) {
+        this.earlyBirdDiscountService = earlyBirdDiscountService;
+    }
 
     @GetMapping()
     public String discount(@RequestParam LocalDate eventDate,
